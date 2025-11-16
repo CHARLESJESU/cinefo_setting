@@ -270,7 +270,9 @@ class _MyHomescreenState extends State<MyHomescreen> {
                     ),
                     child: Center(
                       child: CircleAvatar(
-                        backgroundImage: AssetImage(cinefodriver),
+                        // backgroundImage: AssetImage(cinefodriver),
+                        backgroundImage: AssetImage(cinefoagent),
+
                         radius: 40,
                         backgroundColor: Colors.white,
                       ),
