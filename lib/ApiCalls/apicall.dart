@@ -43,43 +43,43 @@ Future<Map<String, dynamic>> driverreportapi({
     };
   }
 }
-Future<Map<String, dynamic>> otpupdateapi({
-  required String otp,
-  required int tripid,
-  required String vsid,
-}) async {
-  try {
-    final payload = {"otp": otp, "tripid": tripid};
-    final tripstatusresponse = await http.post(
-      processSessionRequest,
-      headers: <String, String>{
-        'Content-Type': 'application/json; charset=UTF-8',
-        'VMETID':
-        'QgVDrPhlWrDKmna6XTWerKXWfIod6JruEjC1ZF34o0gGV+B0KRmpCzmEORTzVacdYBA91w99nrhEa1Gd5737LvAs5gepXBCNUTbMmzgPwm6rA/D76Zg0V43bWafhalAf70Q3pxJ5hLFHN6yIzKMsrj1aqc7DihVwrdIs2hsM5mTcWKBk3kdbLbbvClJiw7HKLhUr5G2jNbzoKkwGeiZ3ywN+g2zv4d5edQteQ4Lz6f5Egu9hFOut8t3bkTaAWeraSpXgNwKWBDitc/KcRN3SGikhgWV3gTI5BFSPVB8H1Gdck6p3hUCHGTlk/aN80p4lZTRi8RByB9ebSxT5Qdo7KQ==',
-        'VSID': vsid,
-      },
-      body: jsonEncode(payload),
-    );
+  Future<Map<String, dynamic>> otpupdateapi({
+    required String otp,
+    required int tripid,
+    required String vsid,
+  }) async {
+    try {
+      final payload = {"otp": otp, "tripid": tripid};
+      final tripstatusresponse = await http.post(
+        processSessionRequest,
+        headers: <String, String>{
+          'Content-Type': 'application/json; charset=UTF-8',
+          'VMETID':
+          'QgVDrPhlWrDKmna6XTWerKXWfIod6JruEjC1ZF34o0gGV+B0KRmpCzmEORTzVacdYBA91w99nrhEa1Gd5737LvAs5gepXBCNUTbMmzgPwm6rA/D76Zg0V43bWafhalAf70Q3pxJ5hLFHN6yIzKMsrj1aqc7DihVwrdIs2hsM5mTcWKBk3kdbLbbvClJiw7HKLhUr5G2jNbzoKkwGeiZ3ywN+g2zv4d5edQteQ4Lz6f5Egu9hFOut8t3bkTaAWeraSpXgNwKWBDitc/KcRN3SGikhgWV3gTI5BFSPVB8H1Gdck6p3hUCHGTlk/aN80p4lZTRi8RByB9ebSxT5Qdo7KQ==',
+          'VSID': vsid,
+        },
+        body: jsonEncode(payload),
+      );
 
-    print(
-        '🚗 otpupdateapi Status API Response Status: ${tripstatusresponse.statusCode}');
-    print('🚗 otpupdateapi Status API Response Status: ${payload}');
-    print('🚗 otpupdateapi Status API Response Body: ${tripstatusresponse.body}');
+      print(
+          '🚗 otpupdateapi Status API Response Status: ${tripstatusresponse.statusCode}');
+      print('🚗 otpupdateapi Status API Response Status: ${payload}');
+      print('🚗 otpupdateapi Status API Response Body: ${tripstatusresponse.body}');
 
-    return {
-      'statusCode': tripstatusresponse.statusCode,
-      'body': tripstatusresponse.body,
-      'success': tripstatusresponse.statusCode == 200,
-    };
-  } catch (e) {
-    print('❌ Error in tripstatusapi: $e');
-    return {
-      'statusCode': 0,
-      'body': 'Error: $e',
-      'success': false,
-    };
+      return {
+        'statusCode': tripstatusresponse.statusCode,
+        'body': tripstatusresponse.body,
+        'success': tripstatusresponse.statusCode == 200,
+      };
+    } catch (e) {
+      print('❌ Error in tripstatusapi: $e');
+      return {
+        'statusCode': 0,
+        'body': 'Error: $e',
+        'success': false,
+      };
+    }
   }
-}
 Future<Map<String, dynamic>> lookupcallsheetnotforattendenceapi({
   required int projectid,
   required String vsid,
