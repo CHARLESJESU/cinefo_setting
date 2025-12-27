@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'package:production/methods.dart';
+import 'package:production/Screens/Login/login_dialog_helper.dart';
 import 'package:production/variables.dart';
 
 class Changepassword extends StatefulWidget {
@@ -44,13 +44,13 @@ class _ChangepasswordState extends State<Changepassword> {
       setState(() {
         isloading = false;
       });
-      showsuccessPopUp(context, "Password changed", () {});
+      LoginDialogHelper.showsuccessPopUp(context, "Password changed", () {});
 
       currentpassword.clear();
       newpassword.clear();
       _popScreenAfterDelay();
     } else {
-      showSimplePopUp(
+      LoginDialogHelper.showSimplePopUp(
         context,
         "Failed to change the password",
       );
@@ -63,13 +63,13 @@ class _ChangepasswordState extends State<Changepassword> {
       if (currentpassword.text.isNotEmpty && newpassword.text.isNotEmpty) {
         changepassword();
       } else {
-        showSimplePopUp(
+        LoginDialogHelper.showSimplePopUp(
           context,
           "Please fill in all fields",
         );
       }
     } else {
-      showSimplePopUp(
+      LoginDialogHelper.showSimplePopUp(
         context,
         "Passwords don't match",
       );

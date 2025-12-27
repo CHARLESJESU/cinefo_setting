@@ -10,7 +10,7 @@ class UpdateService {
   // static const String playStoreUrl =
   //     'https://play.google.com/store/apps/details?id=com.vlabs.cinefo_dancer';
   static const String playStoreUrl =
-      'https://play.google.com/store/apps/details?id=com.vlabs.cinefo_dance';
+      'https://play.google.com/store/apps/details?id=com.vlabs.cinefo_agent';
 
   // Prevent repeated checks during same app session (avoid loops).
   static bool _checkedThisSession = false;
@@ -87,8 +87,8 @@ class UpdateService {
       }
 
       // 2) If market: scheme not available, try https Play Store with packageName
-      final playWebUri =
-      Uri.parse('https://play.google.com/store/apps/details?id=$packageName');
+      final playWebUri = Uri.parse(
+          'https://play.google.com/store/apps/details?id=$packageName');
       if (await canLaunchUrl(playWebUri)) {
         await launchUrl(playWebUri);
         return;

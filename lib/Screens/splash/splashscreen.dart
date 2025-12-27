@@ -101,23 +101,25 @@ class _SplashScreenState extends State<SplashScreen> {
               print('🚗 DEBUG: Navigating to Routescreenfordriver');
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const Routescreenfordriver()),
+                MaterialPageRoute(
+                    builder: (context) => const Routescreenfordriver()),
               );
             } else if (isAgent) {
               print('👔 DEBUG: Navigating to RoutescreenforAgent');
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const RoutescreenforAgent()),
+                MaterialPageRoute(
+                    builder: (context) => const RoutescreenforAgent()),
               );
             } else {
               print('👔 DEBUG: Navigating to RoutescreenforIncharge');
               Navigator.pushReplacement(
                 context,
-                MaterialPageRoute(builder: (context) => const RoutescreenforIncharge()),
+                MaterialPageRoute(
+                    builder: (context) => const RoutescreenforIncharge()),
               );
             }
           }
-
         }
       } else {
         // No login data found, navigate to login screen
@@ -187,8 +189,8 @@ class _SplashScreenState extends State<SplashScreen> {
     registeredMovie = loginData['registered_movie'];
     projectId = loginData['project_id'];
     productionTypeId = loginData['production_type_id'] ?? 0;
-    productionHouse = loginData['production_house']??' ';
-    vmid = loginData['vmid']??0;
+    productionHouse = loginData['production_house'] ?? ' ';
+    vmid = loginData['vmid'] ?? 0;
 
     // Convert driver field from int to bool (database stores as int, variable expects bool)
     final driverValue = loginData['driver'];
@@ -244,7 +246,6 @@ class _SplashScreenState extends State<SplashScreen> {
                       ),
                       child: ClipOval(
                         child: Image.asset(
-
                           // cinefoagent,
                           // dance__logo,
                           // setting__logo,
@@ -260,9 +261,9 @@ class _SplashScreenState extends State<SplashScreen> {
                     // App Title
                     Text(
                       // 'Agent App',
-                      'Dancer App',
+                      'Agent App',
                       // 'Setting App',
-                     // 'Driver App',
+                      // 'Driver App',
                       style: TextStyle(
                         fontSize: 28,
                         fontWeight: FontWeight.bold,

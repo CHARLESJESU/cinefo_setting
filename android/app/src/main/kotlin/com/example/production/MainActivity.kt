@@ -1,4 +1,4 @@
-package com.vlabs.cinefo_dance
+package com.vlabs.cinefo_agent
 
 import android.app.PendingIntent
 import android.content.Intent
