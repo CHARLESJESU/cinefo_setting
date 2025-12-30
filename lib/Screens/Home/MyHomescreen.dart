@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:production/Profile/profilesccreen.dart';
 import 'package:production/Profile/changepassword.dart';
 
-import 'package:production/Screens/Home/nfcUIDreader.dart';
 
 import 'package:production/Tesing/Sqlitelist.dart';
 
@@ -272,7 +271,7 @@ class _MyHomescreenState extends State<MyHomescreen> {
                       child: CircleAvatar(
                         // backgroundImage: AssetImage(cinefodriver),
                         // backgroundImage: AssetImage(cinefoagent),
-                        backgroundImage: AssetImage(cinefoagent),
+                        backgroundImage: AssetImage(dance__logo),
                         // backgroundImage: AssetImage(setting__logo),
 
                         radius: 40,

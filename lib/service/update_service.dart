@@ -10,7 +10,7 @@ class UpdateService {
   // static const String playStoreUrl =
   //     'https://play.google.com/store/apps/details?id=com.vlabs.cinefo_dancer';
   static const String playStoreUrl =
-      'https://play.google.com/store/apps/details?id=com.vlabs.cinefo_agent';
+      'https://play.google.com/store/apps/details?id=com.vlabs.cinefo_dancer';
 
   // Prevent repeated checks during same app session (avoid loops).
   static bool _checkedThisSession = false;
