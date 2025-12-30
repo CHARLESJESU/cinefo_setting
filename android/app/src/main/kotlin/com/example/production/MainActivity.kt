@@ -1,4 +1,4 @@
-package com.vlabs.cinefo_agent
+package com.vlabs.cinefo_settings
 
 import android.app.PendingIntent
 import android.content.Intent

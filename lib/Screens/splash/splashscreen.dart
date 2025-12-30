@@ -187,7 +187,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     // App Title
                     Text(
     
-                      'Dancer App',
+                      'Settings App',
 
                       style: TextStyle(
                         fontSize: 28,
